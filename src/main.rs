@@ -1,4 +1,5 @@
-use lazy_static;
+use lazy_static::*;
+use std::sync::RwLock;
 
 lazy_static! {
     pub static ref RW: RwLock<bool> = RwLock::new(true);
@@ -7,5 +8,5 @@ lazy_static! {
 fn main() {
     println!("Hello, world!");
 
-    RW.read()
+    RW.read();
 }
